@@ -120,7 +120,7 @@ python Scripts/DataPreperation/4.RdKitSimilaritySearch.py -infile TotalSMILESPos
 
 Plot Tanimoto Similarity Between Positive and Negative sets.
 
-``` r
+``` R
 # Here the first argument is input file and second is the output file
 Rscript Scripts/DataPreperation/5.PlotTanomiotoSimilarityHistograms.R TotalSimilaritySearchOutputs.tsv SimilaritySearchTotal.png
 ```
