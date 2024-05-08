@@ -1,11 +1,3 @@
----
-bibliography: references.bib
-output:
-  word_document: default
-  html_document:
-    df_print: paged
----
-
 # **AntiFungalML: A Machine learning based prediction of anti-fungal activity in small molecules**
 
 ### Author: Gopal Srivastava
