@@ -97,7 +97,7 @@ Rscript Scripts/DataPreperation/3.PlotLipinskiProperties.R DataCuration/Negative
 
 #### Step1
 
-``` bash
+``` shell
 # Remove the header from negative set SMILES file and then contatenate the positive and negative sets to create new total SMILES dataset
 # Run these commands on terminal.
 sed 1d Negativedataset/FinalProcessedSmilesCompound.tsv | cut -f2- > Negativedataset/FinalProcessedSmilesCompound.tsv1 
