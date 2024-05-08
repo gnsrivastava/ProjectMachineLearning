@@ -185,7 +185,7 @@ To get the final 544 compounds out of total negative compounds, use following co
 
 Then split the data into training and testing sets (80:20 % split).
 
-``` bash
+``` shell
 # Extract the randomly selected negative compounds chosen at Data curation steps
 head -1 DataPreparation/NegativeDesc.csv > DataPreparation/negative_header # Get header of descriptor file
 grep -w -f DataCuration/ListofNegativeCompounds.txt DataPreparation/NegativeDesc.csv > DataPreparation/NegativeDesc.csv1
