@@ -10,7 +10,7 @@
 
 AntiFungalML is a machine learning-based tool for predicting the anti-fungal activity of small molecules. The tool uses a binary classification algorithm that takes SDF files as input and returns prediction probabilities for the input compound to have anti-fungal properties. The data sets used to generate the classification algorithm were collected from various sources, including PubChem, ChEMBL, and ceuMassMediator. The positive data set consisted of 544 unique anti-fungal compounds, while the negative data set consisted of 544 unique compounds consisting of secondary metabolites collected from MeFSAT. The tool uses Random Forest as the machine learning algorithm to train models, which outperformed SVM, kNN and CART methods with an ROC value of **0.97**, sensitivity value of **0.89**, and specificity value of **0.87**. The tool also performs feature selection using a mean decrease in accuracy test and optimizes the number of features for training. The best model was found to be top 30 features with mtry 6, which was used for blind testing and achieved a balanced accuracy of **0.8349**, sensitivity of **0.7248**, specificity of **0.9450**, precision of **0.9294**, recall of **0.7248**, and F1 score of **0.8144**.
 
-## [Pre-requisites]{.underline}
+## Pre-requisites
 
 -   Python3
 
@@ -22,7 +22,7 @@ AntiFungalML is a machine learning-based tool for predicting the anti-fungal act
 
 -   R v4.3
 
-## [1. Data Curation]{.underline}
+## 1. Data Curation
 
 The data sets used to generate the classification algorithm were collected from following sources
 
@@ -157,7 +157,7 @@ SimilarityOutput = SimilarityOutput.sample(544, random_state=42)
 SimilarityOutput.to_csv("DataCuration/ListofNegativeCompounds.txt",index=False)
 ```
 
-## [2. Data Preparation]{.underline}
+##[2. Data Preparation
 
 For machine to be able to read chemical information, we need to represent chemical structures as Descriptors and Fingerprints using RdKit.
 
@@ -210,7 +210,7 @@ cat DataPreparation/negative_header DataPreparation/Negativetesting.csv > DataPr
 mv DataPreparation/Negativetesting.csv1 DataPreparation/Negativetesting.csv
 ```
 
-## [3. Machine Learning]{.underline}
+## 3. Machine Learning
 
 ### a. Method Comparisons
 
@@ -642,7 +642,7 @@ predicteddata.insert(0, "CompoundID", testingdata.CompoundID.tolist())
 predicteddata.to_csv("MachineLearning/IndependentTesting/TestingDataPrediction.csv", index=False)
 ```
 
-## [Conclusion]{.underline}
+## Conclusion
 
 AntiFungalML is a powerful tool for predicting the anti-fungal activity of small molecules. The tool uses a binary classification algorithm that takes `SMILES` of compounds as input and returns prediction probabilities for the input compound to have anti-fungal properties. The tool uses Random Forest as the machine learning algorithm to train models, which outperformed other methods with high accuracy, sensitivity, and specificity. The tool also performs feature selection and optimizes the number of features for training, resulting in a highly accurate and reliable model. The best model was found to be top 30 features with mtry 6, which achieved high performance metrics during blind testing. Even though, we were able to achieve high performance compare to other algorithms, there might still be some more improvemnets that can be made. For example, we can use more number of top features, include fingerprints as features etc. Overall, AntiFungalML can be a valuable tool for researchers and scientists working in the field of anti-fungal drug discovery.
 
