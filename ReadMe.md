@@ -246,35 +246,32 @@ We tested Four different classical machine learning algorithms (CART, Support Ve
 
 Let's look into details of each of these methods. What are these methods and how do they function.
 
-Random Forest
+**Random Forest**
 
-:   Random Forest is a popular machine learning algorithm that belongs to the supervised learning technique. It is based on the concept of ensemble learning, which is a process of combining multiple algorithms to solve a particular problem. The main idea behind ensemble learning is that a group of weak models can come together to form a powerful model.
+Random Forest is a popular machine learning algorithm that belongs to the supervised learning technique. It is based on the concept of ensemble learning, which is a process of combining multiple algorithms to solve a particular problem. The main idea behind ensemble learning is that a group of weak models can come together to form a powerful model.
 
-:    Random Forest can be used for both Classification and Regression problems in ML. It creates a set of decision trees from a randomly selected subset of the training set, which then aggregates the votes from different decision trees to decide the final class of the test object. This is known as the "wisdom of the crowd" approach, where the final prediction is based on the majority vote of the individual decision trees.
+Random Forest can be used for both Classification and Regression problems in ML. It creates a set of decision trees from a randomly selected subset of the training set, which then aggregates the votes from different decision trees to decide the final class of the test object. This is known as the "wisdom of the crowd" approach, where the final prediction is based on the majority vote of the individual decision trees.
 
-:    The Random Forest algorithm works by creating multiple decision trees and then aggregating their predictions. This is done by randomly selecting a subset of the training data and using it to train each decision tree. The randomness in the selection of the training data helps to reduce the correlation between the decision trees, which in turn helps to improve the overall performance of the model.
+The Random Forest algorithm works by creating multiple decision trees and then aggregating their predictions. This is done by randomly selecting a subset of the training data and using it to train each decision tree. The randomness in the selection of the training data helps to reduce the correlation between the decision trees, which in turn helps to improve the overall performance of the model.
 
-    The key benefits of using Random Forest include:
+The key benefits of using Random Forest include:
 
-    -   Improved accuracy: By aggregating the predictions of multiple decision trees, Random Forest can achieve higher accuracy than a single decision tree.
+- Improved accuracy: By aggregating the predictions of multiple decision trees, Random Forest can achieve higher accuracy than a single decision tree.
 
-    -   Reduced overfitting: Random Forest is less prone to overfitting than a single decision tree, as the randomness in the selection of the training data helps to reduce the correlation between the decision trees.
+- Reduced overfitting: Random Forest is less prone to overfitting than a single decision tree, as the randomness in the selection of the training data helps to reduce the correlation between the decision trees.
 
-    -   Handling of missing values: Random Forest can handle missing values in the data by using the median value of the variable for regression problems and the mode for classification problems.
+- Handling of missing values: Random Forest can handle missing values in the data by using the median value of the variable for regression problems and the mode for classification problems.
 
-    -   Feature importance: Random Forest can provide information on the importance of each feature in the model, which can be useful for feature selection and understanding the underlying data. [@breiman2001]
+- Feature importance: Random Forest can provide information on the importance of each feature in the model, which can be useful for feature selection and understanding the underlying data. [@breiman2001]
 
-Support Vector Machine (SVM)
+**Support Vector Machine (SVM)**
 
-:   Support Vector Machine (SVM) is one of the classical machine learning algorithm that belongs to the supervised learning technique. It can be used for both Classification and Regression problems in ML. SVM is based on the concept of finding a hyperplane that can best separate two classes of data.
+Support Vector Machine (SVM) is one of the classical machine learning algorithm that belongs to the supervised learning technique. It can be used for both Classification and Regression problems in ML. SVM is based on the concept of finding a hyperplane that can best separate two classes of data.
+The main idea behind SVM is to find the hyperplane that maximizes the margin between the two classes. The margin is defined as the distance between the hyperplane and the nearest data points from each class. These nearest data points are called support vectors, hence the name Support Vector Machine.
+SVM uses a kernel function to transform the data into a higher dimensional space, where it is easier to find a hyperplane that can separate the two classes. The most commonly used kernel functions are linear, polynomial, and radial basis function (RBF) [@cristianini2000].
+There are several types of kernel functions that can be used in Support Vector Machine (SVM), including:
 
-    The main idea behind SVM is to find the hyperplane that maximizes the margin between the two classes. The margin is defined as the distance between the hyperplane and the nearest data points from each class. These nearest data points are called support vectors, hence the name Support Vector Machine.
-
-    SVM uses a kernel function to transform the data into a higher dimensional space, where it is easier to find a hyperplane that can separate the two classes. The most commonly used kernel functions are linear, polynomial, and radial basis function (RBF) [@cristianini2000].
-
-    There are several types of kernel functions that can be used in Support Vector Machine (SVM), including:
-
-    1.  Linear kernel: This is the simplest kernel function, which maps the data into a higher dimensional space by preserving the original feature space. The linear kernel is defined as:
+1.  Linear kernel: This is the simplest kernel function, which maps the data into a higher dimensional space by preserving the original feature space. The linear kernel is defined as:
 
     $$
     K(x, y) = x^T y
@@ -332,21 +329,17 @@ Support Vector Machine (SVM)
 
     -   Flexibility: SVM can be used for both classification and regression problems, and can handle different types of kernel functions.
 
-K^th^ Nearest Neighbor (kNN)
+**K^th^ Nearest Neighbor (kNN)**
 
-:   K-Nearest Neighbor (kNN) is a simple and effective instance-based learning algorithm used for classification and regression tasks. In kNN, the output of a new instance is determined by a majority vote of its k-nearest neighbors in the training set, where k is a positive integer. For classification tasks, the class label of the new instance is assigned based on the majority class of its k-nearest neighbors. For regression tasks, the output value of the new instance is calculated as the average of the output values of its k-nearest neighbors.
-
-    The performance of kNN depends on the choice of k, the distance metric used, and the curse of dimensionality. A small value of k may result in overfitting, while a large value of k may result in underfitting. The distance metric used in kNN can be Euclidean, Manhattan, or any other metric that is appropriate for the data. The curse of dimensionality refers to the phenomenon where the performance of kNN degrades as the dimensionality of the data increases. This is because the volume of the feature space increases so rapidly with the number of dimensions that the available data become sparse.
-
-    Despite these challenges, kNN has several advantages, such as ease of implementation, robustness to noisy data, and the ability to handle multi-class problems. It is often used as a baseline model for comparison with other more complex models. In summary, kNN is a simple yet powerful algorithm that can be used for classification and regression tasks, and its performance depends on the choice of k, the distance metric, and the dimensionality of the data [@cover1967].
+K-Nearest Neighbor (kNN) is a simple and effective instance-based learning algorithm used for classification and regression tasks. In kNN, the output of a new instance is determined by a majority vote of its k-nearest neighbors in the training set, where k is a positive integer. For classification tasks, the class label of the new instance is assigned based on the majority class of its k-nearest neighbors. For regression tasks, the output value of the new instance is calculated as the average of the output values of its k-nearest neighbors.
+The performance of kNN depends on the choice of k, the distance metric used, and the curse of dimensionality. A small value of k may result in overfitting, while a large value of k may result in underfitting. The distance metric used in kNN can be Euclidean, Manhattan, or any other metric that is appropriate for the data. The curse of dimensionality refers to the phenomenon where the performance of kNN degrades as the dimensionality of the data increases. This is because the volume of the feature space increases so rapidly with the number of dimensions that the available data become sparse.
+Despite these challenges, kNN has several advantages, such as ease of implementation, robustness to noisy data, and the ability to handle multi-class problems. It is often used as a baseline model for comparison with other more complex models. In summary, kNN is a simple yet powerful algorithm that can be used for classification and regression tasks, and its performance depends on the choice of k, the distance metric, and the dimensionality of the data [@cover1967].
 
 **Classification And Regression Trees (CART)**
 
-:   Classification and Regression Trees (CART) is a popular decision tree algorithm used for both classification and regression tasks. In CART, the data is recursively split into subsets based on the values of the input features until a stopping criterion is met. The tree is constructed by selecting the best split at each node, which maximizes the homogeneity of the resulting subsets. For classification tasks, the homogeneity is measured using a criterion such as Gini impurity or entropy, while for regression tasks, the homogeneity is measured using the mean squared error.
-
-    CART has several advantages, such as ease of interpretation, ability to handle both categorical and numerical data, and robustness to outliers. The resulting tree can be visualized and interpreted, providing insights into the relationships between the input features and the output variable. CART can also handle missing values by using surrogate splits, which are alternative splits that are used when the primary split is not applicable.
-
-    However, CART also has some limitations, such as a tendency to overfit the data, sensitivity to small changes in the data, and the potential for unstable tree structures. To address these limitations, various techniques such as pruning, cross-validation, and ensemble methods can be used. In summary, CART is a powerful and interpretable algorithm for classification and regression tasks, but it requires careful tuning and regularization to avoid overfitting and ensure stability [@breiman2017].
+Classification and Regression Trees (CART) is a popular decision tree algorithm used for both classification and regression tasks. In CART, the data is recursively split into subsets based on the values of the input features until a stopping criterion is met. The tree is constructed by selecting the best split at each node, which maximizes the homogeneity of the resulting subsets. For classification tasks, the homogeneity is measured using a criterion such as Gini impurity or entropy, while for regression tasks, the homogeneity is measured using the mean squared error.
+CART has several advantages, such as ease of interpretation, ability to handle both categorical and numerical data, and robustness to outliers. The resulting tree can be visualized and interpreted, providing insights into the relationships between the input features and the output variable. CART can also handle missing values by using surrogate splits, which are alternative splits that are used when the primary split is not applicable.
+However, CART also has some limitations, such as a tendency to overfit the data, sensitivity to small changes in the data, and the potential for unstable tree structures. To address these limitations, various techniques such as pruning, cross-validation, and ensemble methods can be used. In summary, CART is a powerful and interpretable algorithm for classification and regression tasks, but it requires careful tuning and regularization to avoid overfitting and ensure stability [@breiman2017].
 
 ------------------------------------------------------------------------
 
