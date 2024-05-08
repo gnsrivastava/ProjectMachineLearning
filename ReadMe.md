@@ -641,6 +641,7 @@ AntiFungalML is a powerful tool for predicting the anti-fungal activity of small
 
 ------------------------------------------------------------------------
 **Reference**
+
 Bickerton, G. Richard, Gaia V. Paolini, Jérémy Besnard, Sorel Muresan, and Andrew L. Hopkins. 2012. “Quantifying the Chemical Beauty of Drugs.” Nature Chemistry 4 (2): 90–98. https://doi.org/10.1038/nchem.1243.
 Breiman, Leo. 2001. Machine Learning 45 (1): 5–32. https://doi.org/10.1023/a:1010933404324.
 Breiman, Leo, Jerome H. Friedman, Richard A. Olshen, and Charles J. Stone. 2017. Classification and Regression Trees. Routledge. https://doi.org/10.1201/9781315139470.
