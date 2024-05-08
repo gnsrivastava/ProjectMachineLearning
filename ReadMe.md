@@ -250,9 +250,9 @@ Random Forest
 
 :   Random Forest is a popular machine learning algorithm that belongs to the supervised learning technique. It is based on the concept of ensemble learning, which is a process of combining multiple algorithms to solve a particular problem. The main idea behind ensemble learning is that a group of weak models can come together to form a powerful model.
 
-    Random Forest can be used for both Classification and Regression problems in ML. It creates a set of decision trees from a randomly selected subset of the training set, which then aggregates the votes from different decision trees to decide the final class of the test object. This is known as the "wisdom of the crowd" approach, where the final prediction is based on the majority vote of the individual decision trees.
+:    Random Forest can be used for both Classification and Regression problems in ML. It creates a set of decision trees from a randomly selected subset of the training set, which then aggregates the votes from different decision trees to decide the final class of the test object. This is known as the "wisdom of the crowd" approach, where the final prediction is based on the majority vote of the individual decision trees.
 
-    The Random Forest algorithm works by creating multiple decision trees and then aggregating their predictions. This is done by randomly selecting a subset of the training data and using it to train each decision tree. The randomness in the selection of the training data helps to reduce the correlation between the decision trees, which in turn helps to improve the overall performance of the model.
+:    The Random Forest algorithm works by creating multiple decision trees and then aggregating their predictions. This is done by randomly selecting a subset of the training data and using it to train each decision tree. The randomness in the selection of the training data helps to reduce the correlation between the decision trees, which in turn helps to improve the overall performance of the model.
 
     The key benefits of using Random Forest include:
 
